@@ -72,8 +72,8 @@ header .navbar.animate {
 
 #hero {
     min-height: 100vh;
-    line-height: 2rem;
-    max-width: 100%;
+    line-height: 5rem;
+    max-width: 200%;
 }
 #hero .content.animate {
     animation: fade-left 1s ease-out;
@@ -108,7 +108,20 @@ header .navbar.animate {
     opacity: 0.8;
 }
 
+#hero .content {
+    text-align: right;
+    padding-right: 10px; /* Adjust spacing */
+}
+
+#hero img {
+
+}
+
 #hero .image img {
+    max-width: 1700px; /* Increase maximum size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make circular if needed */
+
     box-shadow:0px 8px 56px rgba(15, 80, 100, 0.16);
     padding: 0;
     border: 3px solid var(--secondary-color);
@@ -128,48 +141,6 @@ header .navbar.animate {
     box-shadow: 0 0 11px rgb(15 80 100 / 20%);
     filter: contrast(1.2);
     cursor: pointer;
-}
-
-#hero a.btn.social-icon {
-    color: var(--primary-color) !important;
-    line-height: 0%;
-    border-radius: 50%;
-    margin-top: 50px;
-    padding: 0.7rem;
-    border: 1px solid var(--primary-color);
-    transition: none;
-}
-
-#hero a.btn.social-icon img {
-    width: 1em;
-}
-
-#hero a.btn.social-icon:hover {
-    opacity: 0.8;
-}
-
-#hero a.btn {
-    margin-top: 50px;
-    padding: 0.7rem 1.75rem;
-    border: 1px solid var(--primary-color);
-    color: var(--text-color) !important;
-    border-radius: .75rem;
-    transition: none;
-}
-
-#hero a.btn:focus {
-    box-shadow: none;
-}
-
-#hero a.btn:hover {
-    background-color: var(--secondary-color) !important;
-    color: var(--text-color) !important;
-    opacity: 0.9;
-}
-
-#hero a.btn.social-icon:hover {
-    background-color: var(--background-color) !important;
-    opacity: 0.7;
 }
 
 #hero .hero-content > a {
