@@ -5,7 +5,7 @@
 <div align="center">
   <a href="https://github.com/github_username/repo_name"></a>
 
-<h3 align="center">yourphotograph</h3>
+<h3 align="center">Yourphotograph</h3>
 
   <p align="center">
     <br />
