@@ -1,8 +1,8 @@
 #vscode settings
 .vscode
 
-#generated
-/public/
-
 #generated too
 .hugo_build.lock
+
+#vscode workspace
+.code-workspace

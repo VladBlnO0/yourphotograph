@@ -1,5 +1,5 @@
 {{ define "head" }}
-<meta name="description" content={{ .Site.Params.description }}>
+<meta name="description" content= {{ .Site.Params.description }}>
 {{ end }}
 
 {{ define "title" }}
@@ -9,9 +9,9 @@
 {{ define "main" }}
 <div class="container py-5 text-center">
     <img src="{{ .Site.Params.staticPath }}/404.png" alt='{{ .Site.Params.terms.pageNotFound | default "404 page not found" }}' class="img-fluid" width="29%">
-    <h1>{{ .Site.Params.terms.pageNotFound | default "404" }}</h1>
-    <h2>{{ .Site.Params.terms.pageNotFound | default "cat ate this page" }}</h2>
-    <a href="Home_page">http://localhost:1313/</a>
+    <h1>{{ "404" }}</h1>
+    <h2>{{ "cat ate this page" }}</h2>
+    <a href="*">http://localhost:1313/</a>
 
 </div>
 {{ end }}
