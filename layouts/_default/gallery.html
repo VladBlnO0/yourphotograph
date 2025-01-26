@@ -1,37 +1,36 @@
-{{ define "head" }}
-<meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
-<!-- Uncomment if list.css is needed -->
-<!-- <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/list.css" media="all"> -->
-{{ if .Params.viewer | default true }}
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/gallery.css">
-{{ end }}
-{{ end }}
-
-{{ define "title" }}
-{{ .Title }} | {{ .Site.Title }}
+{{ define "customContent" }}
+<section class="gallery-intro text-center py-4">
+  <h2>{{ .Title }}</h2>
+  {{ with .Params.description }}
+    <p>{{ . }}</p>
+  {{ end }}
+</section>
 {{ end }}
 
 {{ define "main" }}
-<section class="main">
+<section class="gallery">
   <div class="container">
     <div class="row">
-      <div class="col">
-        <h1>{{ .Title }}</h1>
-        <div class="py-3">{{ .Content | emojify }}</div>
-      </div>
-    </div>
-    <div class="row">
-      {{- $images := .Resources.ByType "image" -}}
-      {{ range $image := $images }}
-        {{- /* if width is greater than height */ -}}
-        {{- if gt $image.Width $image.Height -}}
-          {{- $image = $image.Fill (printf "%dx%d" $image.Height $image.Height) -}}
-        {{- else -}}
-          {{- /* if height is greater than width */ -}}
-          {{- $image = $image.Fill (printf "%dx%d" $image.Width $image.Width) -}}
-        {{- end }}
-        <div class="col-6 col-md-4 col-xl-3 pb-3 px-2">
-          <img src="{{ $image.RelPermalink }}" alt="Gallery Image" class="img-fluid" width="{{ $image.Width }}" height="{{ $image.Height }}">
+      {{- /* Load all image resources */ -}}
+      {{- $images := .Resources.Match "**images/*.{jpg, png}" -}}
+      {{ if $images }}
+        {{ range $image := $images }}
+          {{- /* Ensure images are square */ -}}
+          {{- if gt $image.Width $image.Height -}}
+            {{- $image = $image.Fill (printf "%dx%d" $image.Height $image.Height) -}}
+          {{- else -}}
+            {{- $image = $image.Fill (printf "%dx%d" $image.Width $image.Width) -}}
+          {{- end }}
+
+          <div class="col-6 col-md-4 col-xl-3 pb-3 px-2">
+            <a href="{{ $image.RelPermalink }}" target="_blank">
+              <img src="{{ $image.RelPermalink }}" alt="{{ $image.Name }}" class="img-fluid" width="{{ $image.Width }}" height="{{ $image.Height }}">
+            </a>
+          </div>
+        {{ end }}
+      {{ else }}
+        <div class="col-12">
+          <p>No images found for this gallery.</p>
         </div>
       {{ end }}
     </div>

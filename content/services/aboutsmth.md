@@ -2,7 +2,6 @@
 title: "About test"
 date: 2021-04-03T22:41:10+05:30
 draft: false
-github_link: "https://github.com/gurusabarish/hugo-profile"
 author: "John Doe"
 tags:
   - Placeholder text

@@ -3,7 +3,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name"></a>
+  <a href="https://github.com/VladBlnO0/yourphotograph"></a>
 
 <h3 align="center">Yourphotograph</h3>
 
