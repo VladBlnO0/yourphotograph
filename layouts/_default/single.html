@@ -18,19 +18,6 @@
         <div class="pr-lg-4">
           <div class="title mb-5">
             <h1 class="text-center mb-4">{{ .Title }}</h1>
-            <div class="text-center">
-              {{ if .Params.author }}
-                {{ .Params.author }}
-                <small>|</small>
-              {{ end }}
-              {{ .Date.Format (.Site.Params.datesFormat.article | default "Jan 2, 2006") }}
-
-              {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
-              <span id="readingTime">
-                {{ .Site.Params.singlePages.readTime.content | default "min read" }}
-              </span>
-              {{ end }}
-            </div>
           </div>
           {{ if .Params.image }}
           <div class="featured-image">
@@ -44,16 +31,6 @@
       </div>
       <div class="col-sm-12 col-md-12 col-lg-3">
         <div id="stickySideBar" class="sticky-sidebar">
-          {{ if .Params.toc | default true}}
-          <aside class="toc">
-              <h5>
-                {{ .Site.Params.terms.toc | default "Table Of Contents" }}
-              </h5>
-              <div class="toc-content">
-                {{.TableOfContents}}
-              </div>
-          </aside>
-          {{ end }}
 
           {{ if .Params.tags }}
           <aside class="tags">
@@ -67,36 +44,6 @@
             </ul>
           </aside>
           {{end}}
-
-          {{ if .Params.socialShare | default .Site.Params.singlePages.socialShare | default true }}
-          <aside class="social">
-            <h5>{{ .Site.Params.terms.social | default "Social" }}</h5>
-            <div class="social-content">
-              <ul class="list-inline">
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text={{ .Title }}&url={{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text={{ .Title }}: {{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
-                    <i class="fab fa-whatsapp"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject={{ .Title }}&amp;body={{ .Site.Params.terms.emailText | default "Check out this site" }} {{ .Site.Params.hostName }}{{ .Permalink | absURL }}'>
-                    <i class="fa fa-envelope"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </aside>
-          {{ end }}
         </div>
       </div>
     </div>

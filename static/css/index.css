@@ -231,17 +231,17 @@ header .navbar.animate {
     width: 100%;
 }
 
-/* achievements */
+/* kind_words */
 
-#achievements a {
+#kind_words a {
     text-decoration: none;
 }
 
-#achievements h3 {
+#kind_words h3 {
     color: var(--text-secondary-color) !important;
 }
 
-#achievements .card {
+#kind_words .card {
     cursor: context-menu;
     background-color: var(--secondary-color) !important;
     border-radius: 1rem;
@@ -251,30 +251,30 @@ header .navbar.animate {
     border: 2px solid transparent;
 }
 
-#achievements a.card {
+#kind_words a.card {
     cursor: alias;
 }
 
-#achievements .card h5 {
+#kind_words .card h5 {
     color: var(--text-color) !important;
     opacity: 0.9;
 }
 
-#achievements .card:hover {
+#kind_words .card:hover {
     border: 2px solid var(--text-color);
     transition: .3s;
 }
-#achievements .card:focus {
+#kind_words .card:focus {
     border: 2px solid var(--text-color);
     transition: .3s;
 }
 
-#achievements .card-text {
+#kind_words .card-text {
     background-color: var(--secondary-color) !important;
     color: var(--text-secondary-color) !important;
 }
 
-#achievements img {
+#kind_words img {
     border-radius: 0.7rem;
 }
 

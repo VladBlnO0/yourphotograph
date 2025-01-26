@@ -16,17 +16,17 @@ outputs = { home = ["HTML", "RSS", "JSON"], page = ["HTML", "RSS"] }
         name = "Gallery"
         weight = 1
      [[Menus.main]]
-        identifier = "dropdown1"
-        title = "example dropdown 1"
-        name = "example 1"
-        url = "/#"
+        identifier = "oc_dropdown1"
+        title = "Orange Cats Dropdown"
+        name = "Orange Cats"
+        url = "/gallery/orange-cats"
         parent = "dropdown"
         weight = 1
      [[Menus.main]]
-        identifier = "dropdown2"
-        title = "example dropdown 2"
-        name = "example 2"
-        url = "/#"
+        identifier = "col_dropdown2"
+        title = "Cool Orange Cats Dropdown"
+        name = "Cool Orange Cats"
+        url = "/#cool_orange_cats"
         parent = "dropdown"
         weight = 2
 
@@ -83,7 +83,7 @@ outputs = { home = ["HTML", "RSS", "JSON"], page = ["HTML", "RSS"] }
         enableSeparator = false
         [params.navbar.menus]
             disableAbout = false
-            disableAchievements = false
+            disableKind_words = false
             disableContact = false
 
     # Hero
@@ -115,27 +115,27 @@ outputs = { home = ["HTML", "RSS", "JSON"], page = ["HTML", "RSS"] }
             title = "\nHere are a few cat I am been working with:"
             items = ["Dark cat", "Light cat", "Orange cat"]
 
-    # Achievements
-    [params.achievements]
+    # Kind Words
+    [params.kind_words]
         enable = true
         title = "Reviews"
-        [[params.achievements.items]]
+        [[params.kind_words.items]]
             title = "Happy Cat"
             content = "I am very happy cat"
             image = "/images/hero.png"
-        [[params.achievements.items]]
+        [[params.kind_words.items]]
             title = "Orange Cat"
             content = "I am very orange cat"
             image = "/images/hero.png"
-        [[params.achievements.items]]
+        [[params.kind_words.items]]
             title = "Big Cat"
             content = "I am very big cat"
             image = "/images/hero.png"
-        [[params.achievements.items]]
+        [[params.kind_words.items]]
             title = "Website Cat"
             content = "I am website cat"
             image = "/images/hero.png"
-        [[params.achievements.items]]
+        [[params.kind_words.items]]
             title = "Cat"
             content = "It is just a Cat"
             image = "/images/hero.png"
@@ -173,12 +173,12 @@ outputs = { home = ["HTML", "RSS", "JSON"], page = ["HTML", "RSS"] }
 
     # Single pages like blog and post
     [params.singlePages]
-        socialShare = true
+        socialShare = false
         [params.singlePages.readTime]
-            enable = true
+            enable = false
             content = "min read"
         [params.singlePages.scrollprogress]
-            enable = true
+            enable = false
         [params.singlePages.tags]
             openInNewTab = true
 

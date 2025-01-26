@@ -71,13 +71,6 @@
             <!-- navbar content -->
             <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
                 <ul class="navbar-nav {{ .Site.Params.navbar.align | default "ms-auto"}} text-center">
-                    {{ if not (.Site.Params.navbar.disableSearch | default false) }}
-                        <li class="nav-item navbar-text d-block d-md-none">
-                            <div class="nav-link">
-                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='{{ .Site.Params.navbar.searchPlaceholder | default "Ctrl + k to Search..."}}' aria-label="Search" oninput="searchOnChange(event)">
-                            </div>
-                        </li>
-                    {{ end }}
 
                     {{ if and (.Site.Params.about.enable | default false) (not (.Site.Params.navbar.menus.disableAbout | default false)) }}
                     <li class="nav-item navbar-text">
@@ -87,14 +80,19 @@
                     </li>
                     {{ end }}
 
-                    {{ if and (.Site.Params.achievements.enable | default false) (not (.Site.Params.navbar.menus.disableAchievements | default false)) }}
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#achievements"
-                            aria-label="achievements">
-                            {{ .Site.Params.achievements.title | default "Achievements" }}
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#kind_words"
+                            aria-label="kind_words">
+                            {{ .Site.Params.kind_words.title | default "Kind Words" }}
                         </a>
                     </li>
-                    {{ end }}
+
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#services"
+                            aria-label="services">
+                            {{ .Site.Params.contact.title | default "Services" }}
+                        </a>
+                    </li>
 
                     {{ if and (.Site.Params.contact.enable | default false) (not (.Site.Params.navbar.menus.disableContact | default false)) }}
                     <li class="nav-item navbar-text">
@@ -105,7 +103,7 @@
                     </li>
                     {{ end }}
 
-                    {{ if and .Site.Menus.main (.Site.Params.navbar.enableSeparator | default false) }}
+                    {{ if and .Site.Menus.main (.Site.Params.navbar.enableSeparator | default true) }}
                         <li class="nav-item navbar-text d-none d-lg-block d-xl-block"><div class="nav-link nav-link-sep"></div></li>
                         <div class="dropdown-divider"></div>
                     {{ end }}

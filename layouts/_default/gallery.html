@@ -1,62 +1,35 @@
-{{/*  {{ define "head" }}
+{{ define "head" }}
 <meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
+<!-- Uncomment if list.css is needed -->
 <!-- <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/list.css" media="all"> -->
 {{ if .Params.viewer | default true }}
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/gallery.css">
 {{ end }}
-
 {{ end }}
 
 {{ define "title" }}
-{{.Title }} | {{ .Site.Title }}
-{{ end }}  */}}
-
-
-{{/*  {{ define "main" }}
-<div class="container pt-5" id="list-page">
-    <h2 class="text-center pb-2">{{.Title}}</h2>
-    <h6 class="text-center">{{ .Params.description | emojify }}</h6>
-    <div class="row p-4">
-        {{ .Content | emojify }}
-    </div>
-    <div class="card-group p-4">
-        <div class="row justify-content-center">
-            {{ range .Params.galleryImages }}
-            <div class="col-md-4 p-0 m-0">
-                <div class="card p-0 m-0 border-0">
-                    <img class="w-100 {{if .Params.viewer | default true}}viewer-enabled-image{{end}}" height="280px" src="{{ .src }}">
-                </div>
-            </div>
-            {{ end }}
-        </div>
-    </div>
-</div>
-
+{{ .Title }} | {{ .Site.Title }}
 {{ end }}
-
-{{ end }}  */}}
-
 
 {{ define "main" }}
 <section class="main">
   <div class="container">
     <div class="row">
       <div class="col">
-        {{ partial "title" . }}
+        <h1>{{ .Title }}</h1>
         <div class="py-3">{{ .Content | emojify }}</div>
-
       </div>
     </div>
     <div class="row">
       {{- $images := .Resources.ByType "image" -}}
       {{ range $image := $images }}
         {{- /* if width is greater than height */ -}}
-        {{- if gt .Width .Height -}}
-          {{- $image = .Fill (printf "%dx%d" .Height .Height) -}}
+        {{- if gt $image.Width $image.Height -}}
+          {{- $image = $image.Fill (printf "%dx%d" $image.Height $image.Height) -}}
         {{- else -}}
           {{- /* if height is greater than width */ -}}
-          {{- $image = .Fill (printf "%dx%d" .Width .Width) -}}
-        {{- end -}}
+          {{- $image = $image.Fill (printf "%dx%d" $image.Width $image.Width) -}}
+        {{- end }}
         <div class="col-6 col-md-4 col-xl-3 pb-3 px-2">
           <img src="{{ $image.RelPermalink }}" alt="Gallery Image" class="img-fluid" width="{{ $image.Width }}" height="{{ $image.Height }}">
         </div>
@@ -64,5 +37,4 @@
     </div>
   </div>
 </section>
-
 {{ end }}
