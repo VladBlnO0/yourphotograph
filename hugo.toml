@@ -1,7 +1,6 @@
 baseURL = 'https://example.org'
 languageCode = 'en-us'
 title = 'Your Photographer'
-theme = "hugo-profile"
 
 outputs = { home = ["HTML", "RSS", "JSON"], page = ["HTML", "RSS"] }
 
