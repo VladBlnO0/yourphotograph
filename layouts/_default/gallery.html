@@ -12,7 +12,7 @@
   <div class="container">
     <div class="row">
       {{- /* Load all image resources */ -}}
-      {{- $images := .Resources.Match "**images/*.{jpg, png}" -}}
+      {{- $images := .Resources.Match "**images/*.{png,jpg}" -}}
       {{ if $images }}
         {{ range $image := $images }}
           {{- /* Ensure images are square */ -}}
