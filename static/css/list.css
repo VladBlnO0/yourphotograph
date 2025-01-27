@@ -7,6 +7,25 @@
     border: none;
 }
 
+#list-page .post-footer a {
+    background-color: var(--secondary-color) !important;
+    color: var(--text-secondary-color) !important;
+    border-color: var(--primary-color) !important;
+    transition: none;
+    padding: 0.5rem 9rem;
+    border-top: 1px solid rgba(100, 100, 100, 0.2);
+    opacity: 0.5;
+    font-size: 14px !important;
+}
+
+#list-page .post-footer a:focus {
+    box-shadow: none !important;
+}
+
+#list-page .post-footer a:hover {
+    color: var(--primary-color) !important;
+}
+
 #list-page .card a {
     text-decoration: none;
 }
@@ -22,29 +41,6 @@
 
 #list-page .card-text * {
     background-color: var(--secondary-color) !important;
-}
-
-#list-page .post-footer {
-    padding: .5rem 1rem;
-    background-color: var(--secondary-color) !important;
-    color: var(--text-color) !important;
-    border-top: 1px solid rgba(100, 100, 100, 2);
-    opacity: 5;
-}
-
-#list-page .post-footer a {
-    background-color: var(--secondary-color) !important;
-    color: var(--text-secondary-color) !important;
-    border-color: var(--primary-color) !important;
-    transition: none;
-}
-
-#list-page .post-footer a:focus {
-    box-shadow: none !important;
-}
-
-#list-page .post-footer a:hover {
-    color: var(--primary-color) !important;
 }
 
 #list-page .card > .card-header {

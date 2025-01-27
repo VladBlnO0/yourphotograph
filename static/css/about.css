@@ -1,36 +1,36 @@
-#service {
+#about {
     padding: 60px 0;
     line-height: 1.7em;
     font-size: 17px;
 }
 
-#service .title>h1 {
+#about .title>h1 {
     opacity: 0.8;
     color: var(--text-color) !important;
 }
 
-#service .title small {
+#about .title small {
     opacity: 0.7;
 }
 
-#service .featured-image {
+#about .featured-image {
     padding: 1rem;
     padding-top: 0;
 }
 
-#service .featured-image img {
+#about .featured-image img {
     border-radius: 1rem;
     box-shadow: 0px 8px 56px rgba(15, 80, 100, 0.16);
     margin-bottom: 1rem;
 }
 
-#service .page-content a {
+#about .page-content a {
     display: inline-block;
     text-decoration: none;
     color: var(--text-link-color) !important;
 }
 
-#service .page-content a::after {
+#about .page-content a::after {
     content: "";
     display: block;
     width: 0px;
@@ -41,24 +41,24 @@
     opacity: 0.5;
 }
 
-#service .page-content a:hover::after,
-#service .page-content a:focus::after,
-#service .page-content a:active::after {
+#about .page-content a:hover::after,
+#about .page-content a:focus::after,
+#about .page-content a:active::after {
     width: 100%;
 }
 
-#service .page-content h1,
-#service .page-content h2,
-#service .page-content h3,
-#service .page-content h4,
-#service .page-content h5,
-#service .page-content h6 {
+#about .page-content h1,
+#about .page-content h2,
+#about .page-content h3,
+#about .page-content h4,
+#about .page-content h5,
+#about .page-content h6 {
     color: var(--primary-color) !important;
     margin-bottom: 0.7em;
     opacity: 0.9;
 }
 
-#service .page-content blockquote {
+#about .page-content blockquote {
     padding: 20px 30px;
     border-left: 6px solid var(--primary-color) !important;
     color: var(--text-secondary-color) !important;
@@ -68,13 +68,13 @@
     border-radius: 5px;
 }
 
-#service .page-content blockquote,
-#service .page-content blockquote * {
+#about .page-content blockquote,
+#about .page-content blockquote * {
     background-color: var(--secondary-color) !important;
 }
 
 /* table */
-#service .page-content table {
+#about .page-content table {
     width: auto;
     border-radius: 5px;
     padding: 0.1rem;
@@ -85,11 +85,11 @@
     opacity: 0.8;
 }
 
-#service .page-content table>tr {
+#about .page-content table>tr {
     height: 40px !important;
 }
 
-#service .page-content table>thead>tr>th {
+#about .page-content table>thead>tr>th {
     padding: 0.5rem !important;
     background-color: var(--primary-color) !important;
     color: var(--secondary-color) !important;
@@ -97,21 +97,21 @@
     opacity: 0.9;
 }
 
-#service .page-content table>tbody>tr>td {
+#about .page-content table>tbody>tr>td {
     padding: 0.5rem !important;
     border: 1px solid var(--secondary-color);
     background-color: var(--secondary-color) !important;
     opacity: 0.9;
 }
 
-#service .page-content table>thead>tr {
+#about .page-content table>thead>tr {
     background-color: var(--secondary-color) !important;
     color: var(--secondary-color) !important;
 }
 
 /* code */
 
-#service .page-content pre {
+#about .page-content pre {
     border-radius: 0.7em !important;
     margin: 5px;
     margin-bottom: 2em;
@@ -121,96 +121,96 @@
     max-height: 450px;
 }
 
-#service .page-content pre>code {
+#about .page-content pre>code {
     color: var(--text-secondary-color) !important;
 }
 
-#service .page-content code {
+#about .page-content code {
     color: var(--primary-color) !important;
 }
 
 /* kbd and mark */
 
-#service .page-content kbd {
+#about .page-content kbd {
     color: var(--primary-color) !important;
     background-color: var(--secondary-color) !important;
 }
 
-#service .page-content mark {
+#about .page-content mark {
     color: var(--primary-color) !important;
     background-color: var(--secondary-color) !important;
 }
 
 /* list */
 
-#service .page-content ol,
-#service .page-content ul {
+#about .page-content ol,
+#about .page-content ul {
     margin-bottom: 1.2em;
     padding-left: 1.5em;
     list-style-position: inside;
     opacity: 0.9;
 }
 
-#service .page-content ol li li,
-#service .page-content ul li li {
+#about .page-content ol li li,
+#about .page-content ul li li {
     margin-bottom: 0.5em;
     padding-left: 1.5em;
 }
 
 /* sidebar */
 
-#service aside {
+#about aside {
     /* background-color: var(--secondary-color); */
     border-radius: .7rem;
     padding: .7rem 1rem;
     margin-bottom: 1em;
 }
 
-#service .sticky-sidebar {
+#about .sticky-sidebar {
     position: sticky;
     top: 150px;
 }
 
 /* aboutImg */
 
-#service aside.aboutImg {
+#about aside.aboutImg {
     padding: .7rem 1rem;
 }
 
-#service aside.aboutImg img {
+#about aside.aboutImg img {
     border-radius: 1.5rem !important;
     position: relative;
     /* box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2); */
     max-width: 100%;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-    #service aside.aboutImg img {
+    #about aside.aboutImg img {
         width: 60%;
     }
  }
 
 
-#service aside.aboutImg h5 {
+#about aside.aboutImg h5 {
     margin: .7em 0;
     margin-bottom: 1em;
     color: var(--text-color);
 }
 
-#service aside.aboutImg .img-icon img {
+#about aside.aboutImg .img-icon img {
     width: 1em;
 }
 
-#service aside.aboutImg .aboutImg-content {
+#about aside.aboutImg .aboutImg-content {
     margin-bottom: 1em;
     opacity: 0.9;
 }
 
-#service aside.aboutImg .aboutImg-content ul {
+#about aside.aboutImg .aboutImg-content ul {
     margin-bottom: 1em;
     opacity: 0.9;
 }
 
-#service aside.aboutImg .aboutImg-content ul li a {
+#about aside.aboutImg .aboutImg-content ul li a {
     border: 1px solid var(--primary-color);
     padding: .7rem;
     color: var(--text-color);
@@ -218,19 +218,19 @@
     overflow: hidden;
 }
 
-#service aside.aboutImg .aboutImg-content ul li {
+#about aside.aboutImg .aboutImg-content ul li {
     margin: .7rem .5rem;
     margin-left: 0;
 }
 
-#service aside.aboutImg .aboutImg-content ul li:hover a {
+#about aside.aboutImg .aboutImg-content ul li:hover a {
     opacity: .8;
     color: var(--primary-color);
 }
 
 /* Top scroll */
 
-#service #topScroll {
+#about #topScroll {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -244,7 +244,7 @@
     border-radius: 10px;
 }
 
-#service #topScroll:hover {
+#about #topScroll:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     transition: .5s;

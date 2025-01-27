@@ -3,20 +3,16 @@
 
 <head>
   {{- partial "head.html" . -}}
-
   {{- block "head" . }} {{- end }}
-
-  {{ if eq .Layout "gallery" }}
-  <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/gallery.css">
-  <script src="{{ .Site.Params.staticPath }}/js/gallery.js" defer></script>
-  {{ end }}
 
   <!-- Custom Styles -->
   {{ if .Site.Params.customCSS }}
     <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/style.css">
   {{ end }}
 
-  <title> {{- block "title" . }} {{- end }} </title>
+  <title>
+    {{- block "title" . }} {{- end }}
+  </title>
 </head>
 
 <body class="light">
@@ -24,13 +20,9 @@
   <!-- <script src="/js/jquery-3.6.0.min.js"></script> -->
 
   {{- partial "sections/header.html" . -}}
-
-  {{ block "customContent" . }}{{ end }}
-
   <div id="content">
     {{- block "main" . }}{{- end }}
   </div>
-
   {{- partial "sections/footer/index.html" . -}}
 
   {{- if (or (eq .Site.Params.UseBootstrapCDN true) (eq .Site.Params.UseBootstrapCDN "js")) -}}
@@ -41,6 +33,10 @@
 
   {{- partial "scripts.html" . -}}
 
+  <!-- for search -->
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
 </body>
 
 </html>

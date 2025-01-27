@@ -38,8 +38,7 @@ ignoreLogs = ['warning-goldmark-raw-html']
     favicon = "/logo.png"
 
     useBootstrapCDN = false
-    mathjax = false
-    # Whether the fade animations on the home page will be enabled
+
     animate = true
 
     [params.font]
@@ -47,7 +46,6 @@ ignoreLogs = ['warning-goldmark-raw-html']
         fontWeight = 400 # default: 400
         lineHeight = 1.5 # default: 1.5
         textAlign = "left" # default: left
-
 
     [params.color]
         textColor = "#343a40"
@@ -160,16 +158,10 @@ ignoreLogs = ['warning-goldmark-raw-html']
 
     # For translations
     [params.terms]
-        read = "Read"
         toc = "Table Of Contents"
         copyright = "All rights reserved"
         pageNotFound = "Page not found"
         emailText = "Check out this site"
-
-    [params.datesFormat]
-        article = "Jan 2, 2006"
-        articleList = "Jan 2, 2006"
-        articleRecent = "Jan 2, 2006"
 
     # customScripts = """
     #   <script type="text/javascript"><!-- any script here --></script>

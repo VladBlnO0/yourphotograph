@@ -18,20 +18,20 @@
                                 <textarea class="form-control" name="message" required="true" placeholder='{{ .Site.Params.contact.formspree.messageCaption | emojify | default "Enter your message" }}' rows="{{ .Site.Params.contact.formspree.messageRows | default 3 }}"></textarea>
                             </div>
                             <div class="form-group text-center pt-3">
-                                <button type="submit" class="btn">{{ .Site.Params.contact.btnName | default "Get in Touch" }}</button>
+                                <button type="submit" class="ct_btn">{{ .Site.Params.contact.btnName | default "Get in Touch" }}</button>
                             </div>
                         </form>
                     </div>
                     {{ else if or (.Site.Params.contact.email)  (.Site.Params.contact.btnLink) }}
                     <div class="text-center pt-3">
-                        <a 
+                        <a
                             href='{{ if .Site.Params.contact.btnLink }}
                                     {{ .Site.Params.contact.btnLink | default "#" }}
                                   {{ else }}
                                     mailto:{{ .Site.Params.contact.email }}
                                   {{ end }}'
                             target="_blank"
-                            class="btn"
+                            class="ct_btn"
                         >
                             {{ .Site.Params.contact.btnName | default "Get in Touch" }}
                         </a>
