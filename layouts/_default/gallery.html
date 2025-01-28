@@ -1,7 +1,7 @@
 {{ define "customContent" }}
 <section class="gallery-intro text-center py-4">
   <h2>{{ .Title }}</h2>
-  {{ with .Params.description }}
+  {{ with .Site.Params.description }}
     <p>{{ . }}</p>
   {{ end }}
 </section>

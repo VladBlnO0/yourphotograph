@@ -1,0 +1,15 @@
+[description]
+translation = "Крутий сайт"
+
+[galleryDropdownTitle]
+other = "Галерея випадаюче меню"
+[galleryDropdownName]
+other = "Галерея"
+[orangeCatsDropdownTitle]
+other = "Випадаюче меню Помаранчеві коти"
+[orangeCatsDropdownName]
+other = "Помаранчеві коти"
+[coolOrangeCatsDropdownTitle]
+other = "Випадаюче меню Круті помаранчеві коти"
+[coolOrangeCatsDropdownName]
+other = "Круті помаранчеві коти"

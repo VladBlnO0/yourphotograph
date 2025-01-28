@@ -1,0 +1,12 @@
+<footer>
+    <link rel="stylesheet" href="{{ "css/lang.css" | relURL }}">
+    <div class="footer-language-switcher">
+        <ul class="language-list">
+            {{ range $.Site.Home.AllTranslations }}
+            <li class="language-item">
+                <a href="{{ .Permalink }}" class="language-link">{{ .Language.LanguageName }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</footer>

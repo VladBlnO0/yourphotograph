@@ -1,23 +1,3 @@
-{{- /* theme is auto */}}
-<script>
-    let localStorageValue = localStorage.getItem("pref-theme");
-    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    switch (localStorageValue) {
-        case "dark":
-            document.body.classList.add('dark');
-            break;
-        case "light":
-            document.body.classList.remove('dark');
-            break;
-        default:
-            if (mediaQuery) {
-                document.body.classList.add('dark');
-            }
-            break;
-    }
-</script>
-
 <!-- Show header on scroll up -->
 {{ if .Site.Params.navbar.stickyNavBar.enable | default false }}
 {{ $showNavBarOnScrollUp := .Site.Params.navbar.stickyNavBar.showOnScrollUp | default false }}
@@ -47,7 +27,7 @@
 
 <!-- Navbar -->
 <header id="profileHeader">
-    <nav class="pt-3 navbar navbar-expand-lg {{ if .Site.Params.animate }}animate{{ end }}">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             <!-- navbar brand -->
             <a class="navbar-brand primary-font text-wrap" href="{{ .Site.BaseURL | relURL }}">
@@ -73,28 +53,25 @@
                 <ul class="navbar-nav {{ .Site.Params.navbar.align | default "ms-auto"}} text-center">
 
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#about" aria-label="about">
+                        <a class="nav-link" href="{{ "#about" | relLangURL }}" aria-label="about">
                             {{ .Site.Params.about.title | default "About" }}
                         </a>
                     </li>
 
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#kind_words"
-                            aria-label="kind_words">
+                        <a class="nav-link" href="{{ "#kind_words" | relLangURL }}" aria-label="kind_words">
                             {{ .Site.Params.kind_words.title | default "Kind Words" }}
                         </a>
                     </li>
 
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ "services/" | relURL }}"
-                            aria-label="services">
-                            {{ .Site.Params.contact.title | default "Services" }}
+                        <a class="nav-link" href="{{ "/services/" | relLangURL }}" aria-label="services">
+                            {{ .Site.Params.services.title | default "Services" }}
                         </a>
                     </li>
 
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#contact"
-                            aria-label="contact">
+                        <a class="nav-link" href="{{ "#contact" | relLangURL }}" aria-label="contact">
                             {{ .Site.Params.contact.title | default "Contact" }}
                         </a>
                     </li>
@@ -104,61 +81,32 @@
                         <div class="dropdown-divider"></div>
                     {{ end }}
 
-                    <!-- custom menus from the user -->
                     {{ range .Site.Menus.main }}
                     {{ if .HasChildren }}
-                    <!-- Dropdown menu -->
                     <li class="nav-item navbar-text dropdown">
-                        <a class="nav-link dropdown-toggle" href="{{ .URL }}" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="{{ .Title }}">
-                            {{ .Name }}
+                        <a class="nav-link dropdown-toggle" href="{{ .URL | relLangURL }}" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                            title="{{ i18n .Title }}">
+                            {{ i18n .Name }}
                         </a>
                         <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
                             {{ range .Children }}
-                            <a class="dropdown-item text-center nav-link" href="{{ .URL }}"
-                                title="{{ .Title }}">
-                                {{ .Name }}
+                            <a class="dropdown-item text-center nav-link" href="{{ .URL | relLangURL }}"
+                                title="{{ i18n .Title }}">
+                                {{ i18n .Name }}
                             </a>
                             {{ end }}
                         </div>
                     </li>
                     {{else}}
-                    <!-- Single menu item -->
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{.URL}}" title="{{ .Title }}">
-                            {{ .Pre }}
-                            {{ .Name }}
+                        <a class="nav-link" href="{{.URL | relLangURL }}" title="{{ i18n .Title }}">
+                            {{ i18n .Name }}
                         </a>
                     </li>
                     {{end}}
                     {{end}}
-
-                    {{ if (not .Site.Params.theme.disableThemeToggle | default false) }}
-                    <li class="nav-item navbar-text">
-                        <!-- darkmode mode toggle -->
-                        <div class="text-center">
-                            <button id="theme-toggle">
-                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                                </svg>
-                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="5"></circle>
-                                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                                </svg>
-                            </button>
-                        </div>
-                    </li>
-                    {{ end }}
-
                 </ul>
-
             </div>
         </div>
     </nav>

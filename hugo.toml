@@ -1,8 +1,31 @@
-baseURL = "http://localhost:1313/"
-languageCode = 'en-us'
-title = 'Your Photographer'
+baseURL = "http://localhost/"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
 
-outputs = { home = ["HTML", "RSS", "JSON"], page = ["HTML", "RSS"] }
+[languages]
+  [languages.en]
+    contentDir = 'content/en'
+    languageCode = 'en-US'
+    languageName = 'English'
+    title = 'Your Photographer'
+    weight = 1
+
+  [languages.uk]
+    contentDir = 'content/uk'
+    languageCode = 'uk-UA'
+    languageName = 'Українська'
+    title = 'Ваш фотограф'
+    weight = 2
+
+
+[outputs]
+    home = ['html', 'json']
+    page = ['html']
+    rss = ['rss']
+    section = ['html']
+    taxonomy = ['html']
+    term = ['html']
+
 disableAliases = true
 ignoreLogs = ['warning-goldmark-raw-html']
 
@@ -14,38 +37,36 @@ ignoreLogs = ['warning-goldmark-raw-html']
 [Menus]
     [[Menus.main]]
         identifier = "dropdown"
-        title = "Gallery dropdown menu"
-        name = "Gallery"
+        title = "galleryDropdownTitle"
+        name = "galleryDropdownName"
         weight = 1
-     [[Menus.main]]
+    [[Menus.main]]
         identifier = "oc_dropdown1"
-        title = "Orange Cats Dropdown"
-        name = "Orange Cats"
-        url = "/gallery/orange-cats/"
+        title = "orangeCatsDropdownTitle"
+        name = "orangeCatsDropdownName"
+        url = "/gallery/orange_cats/"
         parent = "dropdown"
         weight = 1
-     [[Menus.main]]
+    [[Menus.main]]
         identifier = "col_dropdown2"
-        title = "Cool Orange Cats Dropdown"
-        name = "Cool Orange Cats"
+        title = "coolOrangeCatsDropdownTitle"
+        name = "coolOrangeCatsDropdownName"
         url = "/gallery/cool_orange_cats/"
         parent = "dropdown"
         weight = 2
 
 [params]
-    title = "Hugo Profile"
     description = "Cool site"
     favicon = "/logo.png"
 
     useBootstrapCDN = false
-
     animate = true
 
     [params.font]
-        fontSize = "1rem" # default: 1rem
-        fontWeight = 400 # default: 400
-        lineHeight = 1.5 # default: 1.5
-        textAlign = "left" # default: left
+        fontSize = "1rem"
+        fontWeight = 400
+        lineHeight = 1.5
+        textAlign = "left"
 
     [params.color]
         textColor = "#343a40"
@@ -56,21 +77,10 @@ ignoreLogs = ['warning-goldmark-raw-html']
         primaryColor = "#007bff"
         secondaryColor = "#f8f9fa"
 
-   [params.color.darkmode]
-        textColor = "#e4e6eb"
-        secondaryTextColor = "#b0b3b8"
-        textLinkColor = "#ffffff"
-        backgroundColor = "#18191a"
-        secondaryBackgroundColor = "#212529"
-        primaryColor = "#ffffff"
-        secondaryColor = "#212529"
-
-    # If you want to customize the menu, you can change it here
     [params.navbar]
-        align = "ms-auto" # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+        align = "ms-auto"
         brandLogo = "/logo.png"
-        # showBrandLogo = false # Show brand logo in nav bar | default is true
-        brandName = "Your Photograph" # Brand name for the brand | default is the title variable
+        brandName = "Your Photograph"
         [params.navbar.stickyNavBar]
             enable = true
             showOnScrollUp = true
@@ -80,7 +90,6 @@ ignoreLogs = ['warning-goldmark-raw-html']
             disableKind_words = false
             disableContact = false
 
-    # Hero
     [params.hero]
         enable = true
         intro = "Hi, i am"
@@ -91,14 +100,6 @@ ignoreLogs = ['warning-goldmark-raw-html']
         [params.hero.bottomImage]
             enable = true
 
-        [params.hero.button]
-            enable = true
-            name = "Resume"
-            url = "#"
-            download = true
-            newPage = false
-
-    # About
     [params.about]
         enable = true
         title = "About Me"
@@ -109,7 +110,6 @@ ignoreLogs = ['warning-goldmark-raw-html']
             title = "\nHere are a few cat I am been working with:"
             items = ["Dark cat", "Light cat", "Orange cat"]
 
-    # Kind Words
     [params.kind_words]
         enable = true
         title = "Kind Words"
@@ -134,34 +134,19 @@ ignoreLogs = ['warning-goldmark-raw-html']
             content = "It is just a Cat"
             image = "/images/hero.png"
 
-    # Contact
     [params.contact]
         enable = true
-        # title = "Custom Name"
-        content = "My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!"
+        content = "My inbox is always open"
         btnName = "Mail me"
-        btnLink = "vladpuku@gmail.com"
+        btnLink = "mail@gmail.com"
         [params.contact.formspree]
             enable = true
             emailCaption = "Enter your email address"
             messageCaption = "Enter your message here"
             messageRows = 8
-
         [params.footer.socialNetworks]
-            x = "https://x.com"
             instagram = "https://instagram.com"
             facebook = "https://facebook.com"
-
-    # List pages like blogs and posts
-    [params.listPages]
-        disableFeaturedImage = false
-
-    # For translations
-    [params.terms]
-        toc = "Table Of Contents"
-        copyright = "All rights reserved"
-        pageNotFound = "Page not found"
-        emailText = "Check out this site"
 
     # customScripts = """
     #   <script type="text/javascript"><!-- any script here --></script>

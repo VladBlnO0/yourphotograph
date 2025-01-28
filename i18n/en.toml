@@ -1,0 +1,15 @@
+[description]
+translation = "Cool site"
+
+[galleryDropdownTitle]
+other = "Gallery dropdown menu"
+[galleryDropdownName]
+other = "Gallery"
+[orangeCatsDropdownTitle]
+other = "Orange Cats Dropdown"
+[orangeCatsDropdownName]
+other = "Orange Cats"
+[coolOrangeCatsDropdownTitle]
+other = "Cool Orange Cats Dropdown"
+[coolOrangeCatsDropdownName]
+other = "Cool Orange Cats"
