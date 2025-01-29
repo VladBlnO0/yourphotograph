@@ -34,9 +34,13 @@ header .navbar .navbar-nav a {
 .navbar-text {
     font-size: 16px !important;
     opacity: 0.95;
-    white-space: nowrap;
+    white-space: normal;
 }
 header .nav-link{
+    display: block;
+    overflow: visible;
+    white-space: normal;
+
     transition: none !important;
 }
 .navbar-brand {
@@ -56,10 +60,21 @@ li > .dropdown-toggle:focus{
 }
 
 .dropdown-menu {
-    overflow: auto;
-    /* z-index: 100; */
+    min-width: auto;
+    width: 140px;
+    white-space: normal;
+    word-wrap: normal;
+    overflow: visible;
+
     background-color: var(--background-color) !important;
     border-color: var(--text-secondary-color) !important;
+}
+.dropdown-item {
+    white-space: normal;
+    overflow: visible;
+    display: block;
+    text-align: left;
+    padding: 10px;
 }
 
 .dropdown-item:hover {

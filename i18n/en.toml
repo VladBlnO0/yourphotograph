@@ -2,14 +2,39 @@
 translation = "Cool site"
 
 [galleryDropdownTitle]
-other = "Gallery dropdown menu"
+other = "Gallery menu"
 [galleryDropdownName]
 other = "Gallery"
 [orangeCatsDropdownTitle]
-other = "Orange Cats Dropdown"
+other = "Orange Cats"
 [orangeCatsDropdownName]
 other = "Orange Cats"
 [coolOrangeCatsDropdownTitle]
-other = "Cool Orange Cats Dropdown"
+other = "Cool Orange Cats"
 [coolOrangeCatsDropdownName]
 other = "Cool Orange Cats"
+
+[hero_intro]
+other = "Hi, I am"
+[hero_title]
+other = "Cat."
+[hero_subtitle]
+other = "I am your cat"
+[hero_content]
+other = "A cool cat"
+
+[contact_title]
+other = "Contact"
+[contact_content]
+other = "My inbox is always open"
+[contact_btnName]
+other = "Mail me"
+[contact_btnLink]
+other = "mail@gmail.com"
+[contact_formspree_emailCaption]
+other = "Enter your email address"
+[contact_formspree_messageCaption]
+other = "Enter your message here"
+
+[navbar_brandName]
+other = "Your Photograph"

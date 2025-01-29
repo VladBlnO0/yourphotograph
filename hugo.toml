@@ -9,6 +9,33 @@ defaultContentLanguageInSubdir = true
     languageName = 'English'
     title = 'Your Photographer'
     weight = 1
+    [languages.en.params.about]
+        enable = true
+        title = "About Me"
+        image = "/images/me.png"
+        content = "Cool catCool catCool catCool catCool catCool catCool catCool cat\nCool catCool catCool cat\nCool catCool catCool catCool catCool catCool catCool catCool catCool cat"
+        [languages.en.params.about.skills]
+            enable = true
+            title = "Here are a few cats I have been working with:"
+            items = ["Dark cat", "Light cat", "Orange cat"]
+    [languages.en.params.kind_words]
+        enable = true
+        title = "Kind Words"
+        [[languages.en.params.kind_words.items]]
+            title = "Happy Cat"
+            content = "I am very happy cat"
+            image = "/images/hero.png"
+        [[languages.en.params.kind_words.items]]
+            title = "Orange Cat"
+            content = "I am very orange cat"
+            image = "/images/hero.png"
+        [[languages.en.params.kind_words.items]]
+            title = "Big Cat"
+            content = "I am very big cat"
+            image = "/images/hero.png"
+    [languages.en.params.services]
+        enable = true
+        title = "Services"
 
   [languages.uk]
     contentDir = 'content/uk'
@@ -16,7 +43,35 @@ defaultContentLanguageInSubdir = true
     languageName = 'Українська'
     title = 'Ваш фотограф'
     weight = 2
+    [languages.uk.params.about]
+        enable = true
+        title = "Про мене"
+        image = "/images/me.png"
+        content = "Крутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кіт\nКрутий кітКрутий кітКрутий кіт\nКрутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кіт"
+        [languages.uk.params.about.skills]
+            enable = true
+            title = "Ось кілька котів, з якими я працював:"
+            items = ["Темний кіт", "Світлий кіт", "Помаранчевий кіт"]
 
+    [languages.uk.params.kind_words]
+        enable = true
+        title = "Добрі слова"
+        [[languages.uk.params.kind_words.items]]
+            title = "Щасливий кіт"
+            content = "Я дуже щасливий кіт"
+            image = "/images/hero.png"
+        [[languages.uk.params.kind_words.items]]
+            title = "Помаранчевий кіт"
+            content = "Я дуже помаранчевий кіт"
+            image = "/images/hero.png"
+        [[languages.uk.params.kind_words.items]]
+            title = "Великий кіт"
+            content = "Я дуже великий кіт"
+            image = "/images/hero.png"
+
+    [languages.uk.params.services]
+        enable = true
+        title = "Послуги"
 
 [outputs]
     home = ['html', 'json']
@@ -25,9 +80,6 @@ defaultContentLanguageInSubdir = true
     section = ['html']
     taxonomy = ['html']
     term = ['html']
-
-disableAliases = true
-ignoreLogs = ['warning-goldmark-raw-html']
 
 [markup]
     [markup.goldmark]
@@ -62,6 +114,10 @@ ignoreLogs = ['warning-goldmark-raw-html']
     useBootstrapCDN = false
     animate = true
 
+    [params.services]
+        enable = true
+        title = "Послуги"
+
     [params.font]
         fontSize = "1rem"
         fontWeight = 400
@@ -80,7 +136,7 @@ ignoreLogs = ['warning-goldmark-raw-html']
     [params.navbar]
         align = "ms-auto"
         brandLogo = "/logo.png"
-        brandName = "Your Photograph"
+        brandName = "{{ T `navbar_brandName` }}"
         [params.navbar.stickyNavBar]
             enable = true
             showOnScrollUp = true
@@ -92,61 +148,29 @@ ignoreLogs = ['warning-goldmark-raw-html']
 
     [params.hero]
         enable = true
-        intro = "Hi, i am"
-        title = "Cat."
-        subtitle = "I am your cat"
-        content = "A cool cat"
+        intro = "{{ T `hero_intro` }}"
+        title = "{{ T `hero_title` }}"
+        subtitle = "{{ T `hero_subtitle` }}"
+        content = "{{ T `hero_content` }}"
         image = "/images/hero.png"
         [params.hero.bottomImage]
             enable = true
 
-    [params.about]
-        enable = true
-        title = "About Me"
-        image = "/images/me.png"
-        content = "Cool catCool catCool catCool catCool catCool catCool catCool cat\nCool catCool catCool cat\nCool catCool catCool catCool catCool catCool catCool catCool catCool cat"
-        [params.about.skills]
-            enable = true
-            title = "\nHere are a few cat I am been working with:"
-            items = ["Dark cat", "Light cat", "Orange cat"]
-
-    [params.kind_words]
-        enable = true
-        title = "Kind Words"
-        [[params.kind_words.items]]
-            title = "Happy Cat"
-            content = "I am very happy cat"
-            image = "/images/hero.png"
-        [[params.kind_words.items]]
-            title = "Orange Cat"
-            content = "I am very orange cat"
-            image = "/images/hero.png"
-        [[params.kind_words.items]]
-            title = "Big Cat"
-            content = "I am very big cat"
-            image = "/images/hero.png"
-        [[params.kind_words.items]]
-            title = "Website Cat"
-            content = "I am website cat"
-            image = "/images/hero.png"
-        [[params.kind_words.items]]
-            title = "Cat"
-            content = "It is just a Cat"
-            image = "/images/hero.png"
-
     [params.contact]
         enable = true
-        content = "My inbox is always open"
-        btnName = "Mail me"
-        btnLink = "mail@gmail.com"
+        title = "{{ T `contact_title` }}"
+        content = "{{ T `contact_content` }}"
+        btnName = "{{ T `contact_btnName` }}"
+        btnLink = "{{ T `contact_btnLink` }}"
         [params.contact.formspree]
             enable = true
-            emailCaption = "Enter your email address"
-            messageCaption = "Enter your message here"
+            emailCaption = "{{ T `contact_formspree_messageCaption` } "
+            messageCaption = "{{ T `contact_formspree_messageCaption` } "
             messageRows = 8
         [params.footer.socialNetworks]
             instagram = "https://instagram.com"
             facebook = "https://facebook.com"
+
 
     # customScripts = """
     #   <script type="text/javascript"><!-- any script here --></script>

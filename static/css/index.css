@@ -113,9 +113,7 @@ header .navbar.animate {
     padding-right: 10px; /* Adjust spacing */
 }
 
-#hero img {
-
-}
+#hero img {}
 
 #hero .image img {
     max-width: 1700px; /* Increase maximum size */

@@ -2,14 +2,39 @@
 translation = "Крутий сайт"
 
 [galleryDropdownTitle]
-other = "Галерея випадаюче меню"
+other = "Галерея меню"
 [galleryDropdownName]
 other = "Галерея"
 [orangeCatsDropdownTitle]
-other = "Випадаюче меню Помаранчеві коти"
+other = "Помаранчеві коти"
 [orangeCatsDropdownName]
 other = "Помаранчеві коти"
 [coolOrangeCatsDropdownTitle]
-other = "Випадаюче меню Круті помаранчеві коти"
+other = "Круті помаранчеві коти"
 [coolOrangeCatsDropdownName]
 other = "Круті помаранчеві коти"
+
+[hero_intro]
+other = "Привіт, я"
+[hero_title]
+other = "Кіт."
+[hero_subtitle]
+other = "Я твій кіт"
+[hero_content]
+other = "Крутий кіт"
+
+[contact_title]
+other = "Контакт"
+[contact_content]
+other = "Моя поштова скринька завжди відкрита"
+[contact_btnName]
+other = "Написати мені"
+[contact_btnLink]
+other = "mail@gmail.com"
+[contact_formspree_emailCaption]
+other = "Введіть свою електронну адресу"
+[contact_formspree_messageCaption]
+other = "Введіть своє повідомлення тут"
+
+[navbar_brandName]
+other = "Ваш Фотограф"
