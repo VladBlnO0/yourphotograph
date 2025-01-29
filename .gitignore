@@ -3,7 +3,8 @@
 
 #generated too
 .hugo_build.lock
-resources/
+
+resources
 
 #vscode workspace
 .code-workspace

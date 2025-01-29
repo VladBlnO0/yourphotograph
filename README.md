@@ -14,11 +14,11 @@
 
 ## About The Project
 
-Website written with Hugo
+This website was built using Hugo, one of the fastest and most efficient static site generators.
 
 ### Built With
 
-* [![Java][Java-shield]][Java.com]
+* [![Hugo][Hugo-shield]][Hugo.io]
 
 ## License
 
@@ -28,5 +28,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[Java-shield]: https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white
-[Java.com]: https://www.java.com/en/
+
+[Hugo-shield]: https://img.shields.io/badge/Hugo-black.svg?style=for-the-badge&logo=Hugo
+[Hugo.io]: https://gohugo.io/
