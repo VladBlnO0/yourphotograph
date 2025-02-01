@@ -7,6 +7,10 @@
 </section>
 {{ end }}
 
+{{ define "title" }}
+{{.Title }} | {{ .Site.Title }}
+{{ end }}
+
 {{ define "main" }}
 <section class="gallery">
   <div class="container">

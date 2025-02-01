@@ -1,6 +1,9 @@
 [description]
 translation = "Крутий сайт"
 
+[button_name]
+other = "Відкрити"
+
 [galleryDropdownTitle]
 other = "Галерея меню"
 [galleryDropdownName]

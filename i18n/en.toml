@@ -1,6 +1,9 @@
 [description]
 translation = "Cool site"
 
+[button_name]
+other = "Open"
+
 [galleryDropdownTitle]
 other = "Gallery menu"
 [galleryDropdownName]
