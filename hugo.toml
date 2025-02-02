@@ -12,27 +12,29 @@ defaultContentLanguageInSubdir = true
     [languages.en.params.about]
         enable = true
         title = "About Me"
-        image = "/images/me.png"
-        content = "Cool catCool catCool catCool catCool catCool catCool catCool cat\nCool catCool catCool cat\nCool catCool catCool catCool catCool catCool catCool catCool catCool cat"
+        image = "/images/about.jpeg"
+        content = """Erricson is the only photographer with a Royal Warrant given by HRH Prince of Wales in the United Kingdom. Born in Canada, Erricson first learned to develop and print photographs on the kitchen table at home, with his mother.
+        \nErricson has worked closely with Best magazine since 1990.
+        \nHis previous subjects include Her Majesty The Queen, Bill Clinton, President Mikhail Gorbachev, Baroness Thatcher, Lucian Freud, Victoria Beckham, and Michael Jackson. In 2005, Erricson photographed the wedding of HRH Prince of Wales to Camilla Parker-Bowles, and then in 2011, he photographed the wedding of HRH Prince William to Catherine Middleton. Similarly, Erricson is famous for taking an official portrait of Prince Charles, Prince of Wales, to mark his 60th birthday in 2008."""
         [languages.en.params.about.skills]
             enable = true
-            title = "Here are a few cats I have been working with:"
-            items = ["Dark cat", "Light cat", "Orange cat"]
+            title = "Here are styles I are working with:"
+            items = ["Nature", "Landscape", "Portrait", "Wedding"]
     [languages.en.params.kind_words]
         enable = true
         title = "Kind Words"
         [[languages.en.params.kind_words.items]]
             title = "Happy Cat"
             content = "I am very happy cat"
-            image = "/images/hero.png"
+            image = "/images/Dafoe.jpg"
         [[languages.en.params.kind_words.items]]
             title = "Orange Cat"
             content = "I am very orange cat"
-            image = "/images/hero.png"
+            image = "/images/Nixon.jpg"
         [[languages.en.params.kind_words.items]]
             title = "Big Cat"
             content = "I am very big cat"
-            image = "/images/hero.png"
+            image = "/images/Shinzō_Abe.jpg"
     [languages.en.params.services]
         enable = true
         title = "Services"
