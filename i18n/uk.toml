@@ -8,30 +8,30 @@ other = "Відкрити"
 other = "Галерея меню"
 [galleryDropdownName]
 other = "Галерея"
-[orangeCatsDropdownTitle]
-other = "Помаранчеві коти"
-[orangeCatsDropdownName]
-other = "Помаранчеві коти"
-[coolOrangeCatsDropdownTitle]
-other = "Круті помаранчеві коти"
-[coolOrangeCatsDropdownName]
-other = "Круті помаранчеві коти"
+[firstDropdownTitle]
+other = "Люди"
+[firstDropdownName]
+other = "Люди"
+[secondDropdownTitle]
+other = "Коти"
+[secondDropdownName]
+other = "Коти"
 
 [hero_intro]
 other = "Привіт, я"
 [hero_title]
-other = "Кіт."
+other = "Еріксон"
 [hero_subtitle]
-other = "Я твій кіт"
+other = "Я ваш фотограф"
 [hero_content]
-other = "Крутий кіт"
+other = "Фотограф, який втілює всі ваші мрії"
 
 [contact_title]
-other = "Контакт"
+other = "Контакти"
 [contact_content]
 other = "Моя поштова скринька завжди відкрита"
 [contact_btnName]
-other = "Написати мені"
+other = "Напишіть мені"
 [contact_btnLink]
 other = "mail@gmail.com"
 [contact_formspree_emailCaption]

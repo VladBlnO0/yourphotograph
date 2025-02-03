@@ -8,14 +8,14 @@ other = "Open"
 other = "Gallery menu"
 [galleryDropdownName]
 other = "Gallery"
-[orangeCatsDropdownTitle]
-other = "Orange Cats"
-[orangeCatsDropdownName]
-other = "Orange Cats"
-[coolOrangeCatsDropdownTitle]
-other = "Cool Orange Cats"
-[coolOrangeCatsDropdownName]
-other = "Cool Orange Cats"
+[firstDropdownTitle]
+other = "Peoples"
+[firstDropdownName]
+other = "Peoples"
+[secondDropdownTitle]
+other = "Cats"
+[secondDropdownName]
+other = "Cats"
 
 [hero_intro]
 other = "Hi, I am"

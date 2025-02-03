@@ -1,22 +1,18 @@
 ---
-title: "The Subtle Chronicler"
+title: "Довша прогулянка"
 layout: "single"
 weight: 2
 ---
 
-Lorem est tota propiore conpellat pectoribus de pectora summo.
+Довша прогулянка містом
 
-- **60 Minutes**
+- **60 хвилин**
 - **$425 USD**
+- **35 фотографій**
+- **1-2 місць**
 
 <!--more-->
 
-Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit risus, cursus vel nibh quis, tempor tristique dolor.
 
-  1. 35 Photos
-  2. 1-2 Locations
-  3. Digital Files Included
-
-# Vagus elidunt
-
-[The Van de Graaf Canon](https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon)
+[Приклади](/gallery/cats/)

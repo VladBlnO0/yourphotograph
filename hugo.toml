@@ -13,9 +13,9 @@ defaultContentLanguageInSubdir = true
         enable = true
         title = "About Me"
         image = "/images/about.jpeg"
-        content = """Erricson is the only photographer with a Royal Warrant given by HRH Prince of Wales in the United Kingdom. Born in Canada, Erricson first learned to develop and print photographs on the kitchen table at home, with his mother.
-        \nErricson has worked closely with Best magazine since 1990.
-        \nHis previous subjects include Her Majesty The Queen, Bill Clinton, President Mikhail Gorbachev, Baroness Thatcher, Lucian Freud, Victoria Beckham, and Michael Jackson. In 2005, Erricson photographed the wedding of HRH Prince of Wales to Camilla Parker-Bowles, and then in 2011, he photographed the wedding of HRH Prince William to Catherine Middleton. Similarly, Erricson is famous for taking an official portrait of Prince Charles, Prince of Wales, to mark his 60th birthday in 2008."""
+        content = """Ericson is the only photographer with a Royal Warrant given by HRH Prince of Wales in the United Kingdom. Born in Canada, Ericson first learned to develop and print photographs on the kitchen table at home, with his mother.
+        \nEricson has worked closely with Best magazine since 1990.
+        \nHis previous subjects include Her Majesty The Queen, Bill Clinton, President Mikhail Gorbachev, Baroness Thatcher, Lucian Freud, Victoria Becharm, and Michael Jackson. In 2005, Ericson photographed the wedding of HRH Prince of Wales to Camilla Parker-Bowels, and then in 2011, he photographed the wedding of HRH Prince William to Catherine Middleton. Similarly, Ericson is famous for taking an official portrait of Prince Charles, Prince of Wales, to mark his 60th birthday in 2008."""
         [languages.en.params.about.skills]
             enable = true
             title = "Here are styles I are working with:"
@@ -24,17 +24,17 @@ defaultContentLanguageInSubdir = true
         enable = true
         title = "Kind Words"
         [[languages.en.params.kind_words.items]]
-            title = "Happy Cat"
-            content = "I am very happy cat"
+            title = "William Dafoe"
+            content = "Ericson is an amazing and talented photographer!"
             image = "/images/Dafoe.jpg"
         [[languages.en.params.kind_words.items]]
-            title = "Orange Cat"
-            content = "I am very orange cat"
+            title = "Richard Nixon"
+            content = "Ericson is an amazing and talented photographer!"
             image = "/images/Nixon.jpg"
         [[languages.en.params.kind_words.items]]
-            title = "Big Cat"
-            content = "I am very big cat"
-            image = "/images/Shinzō_Abe.jpg"
+            title = "Shinzo Abe"
+            content = "Ericson is an amazing and talented photographer!"
+            image = "/images/Shinzo_Abe.jpg"
     [languages.en.params.services]
         enable = true
         title = "Services"
@@ -48,28 +48,30 @@ defaultContentLanguageInSubdir = true
     [languages.uk.params.about]
         enable = true
         title = "Про мене"
-        image = "/images/me.png"
-        content = "Крутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кіт\nКрутий кітКрутий кітКрутий кіт\nКрутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кітКрутий кіт"
+        image = "/images/about.jpeg"
+        content = """Еріксон є єдиним фотографом, який має Королівський Ордер, виданий Його Високістю Принцем Уельським у Сполученому Королівстві. Еріксон, який народився в Канаді, вперше навчився проявляти та друкувати фотографії на кухонному столі вдома разом зі своєю матір’ю.
+        \nЕріксон тісно співпрацює з журналом Best з 1990 року.
+        \nЙого попередні піддані включають Її Величність Королеву, Білла Клінтона, Президента Михайла Горбачова, Баронесу Тетчер, Лючіана Фрейда, Вікторію Бешарм і Майкла Джексона. У 2005 році Еріксон сфотографував весілля Його Високості Принца Уельського з Каміллою Паркер-Боулс, а потім у 2011 році він сфотографував весілля Його Високості Принца Вільяма з Кетрін Міддлтон. Крім того, Еріксон відомий тим, що зробив офіційний портрет принца Чарльза, принца Уельського, до його 60-річчя в 2008 році."""
         [languages.uk.params.about.skills]
             enable = true
-            title = "Ось кілька котів, з якими я працював:"
-            items = ["Темний кіт", "Світлий кіт", "Помаранчевий кіт"]
+            title = "Ось стилі, з якими я працюю:"
+            items = ["Природа", "Пейзаж", "Портрет", "Весілля"]
 
     [languages.uk.params.kind_words]
         enable = true
-        title = "Добрі слова"
+        title = "Відгуки"
         [[languages.uk.params.kind_words.items]]
-            title = "Щасливий кіт"
-            content = "Я дуже щасливий кіт"
-            image = "/images/hero.png"
+            title = "Віллем Дефо"
+            content = "Еріксон - чудовий і талановитий фотограф!"
+            image = "/images/Dafoe.jpg"
         [[languages.uk.params.kind_words.items]]
-            title = "Помаранчевий кіт"
-            content = "Я дуже помаранчевий кіт"
-            image = "/images/hero.png"
+            title = "Річард Ніксон"
+            content = "Еріксон - чудовий і талановитий фотограф!"
+            image = "/images/Nixon.jpg"
         [[languages.uk.params.kind_words.items]]
-            title = "Великий кіт"
-            content = "Я дуже великий кіт"
-            image = "/images/hero.png"
+            title = "Абе Сіндзо"
+            content = "Еріксон - чудовий і талановитий фотограф!"
+            image = "/images/Shinzo_Abe.jpg"
 
     [languages.uk.params.services]
         enable = true
@@ -96,16 +98,16 @@ defaultContentLanguageInSubdir = true
         weight = 1
     [[Menus.main]]
         identifier = "oc_dropdown1"
-        title = "orangeCatsDropdownTitle"
-        name = "orangeCatsDropdownName"
-        url = "/gallery/orange_cats/"
+        title = "firstDropdownTitle"
+        name = "firstDropdownName"
+        url = "/gallery/peoples/"
         parent = "dropdown"
         weight = 1
     [[Menus.main]]
         identifier = "col_dropdown2"
-        title = "coolOrangeCatsDropdownTitle"
-        name = "coolOrangeCatsDropdownName"
-        url = "/gallery/cool_orange_cats/"
+        title = "secondDropdownTitle"
+        name = "secondDropdownName"
+        url = "/gallery/cats/"
         parent = "dropdown"
         weight = 2
 

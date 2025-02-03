@@ -1,22 +1,18 @@
 ---
-title: "The Short Storyteller"
+title: "Коротка прогулянка"
 layout: "single"
 weight: 1
 ---
 
-Lorem est tota propiore conpellat pectoribus de pectora summo.
+Коротка прогулянка містом
 
-- **30 Minutes**
+- **30 хвилин**
 - **$325 USD**
+- **20 фотографій**
+- **1 місце**
 
 <!--more-->
 
-Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit risus, cursus vel nibh quis, tempor tristique dolor.
 
-  1. 20 Photos
-  2. 1 Location
-  3. Digital Files Included
-
-# Vagus elidunt
-
-[The Van de Graaf Canon](https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon)
+[Приклади](/gallery/cats/)
