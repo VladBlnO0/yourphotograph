@@ -20,6 +20,8 @@ This website was built using Hugo, one of the fastest and most efficient static 
 
 * [![Hugo][Hugo-shield]][Hugo.io]
 
+[hugo-profile](https://github.com/gurusabarish/hugo-profile?tab=readme-ov-file)
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
