@@ -14,17 +14,6 @@
     opacity: 0.7;
 }
 
-#single .featured-image {
-    padding: 1rem;
-    padding-top: 0;
-}
-
-#single .featured-image img {
-    border-radius: 1rem;
-    box-shadow: 0px 8px 56px rgba(17, 91, 114, 0.16);
-    margin-bottom: 1rem;
-    background-color: var(--secondary-color);
-}
 #single .page-content a {
     display: inline-block;
     text-decoration: none;
