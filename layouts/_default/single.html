@@ -18,13 +18,8 @@
           <div class="title mb-5">
             <h1 class="text-center mb-4">{{ .Title }}</h1>
           </div>
-          {{ if .Site.Params.image }}
-          <div class="featured-image">
-            <img class="mx-auto d-block no-bootstrap-img" src="{{ .Site.Params.image }}" alt="{{ .Title }}">
-          </div>
-          {{ end }}
           <article class="page-content  p-2">
-          {{ .Content | emojify }}
+          {{ .Content }}
           </article>
         </div>
       </div>
