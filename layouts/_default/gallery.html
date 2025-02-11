@@ -1,25 +1,24 @@
 {{ define "customContent" }}
-<section class="gallery-intro text-center py-4">
-  <h2>{{ .Title }}</h2>
-  {{ with .Site.Params.description }}
-    <p>{{ . }}</p>
-  {{ end }}
-</section>
+  <section class="gallery-intro text-center py-4">
+    <h2>{{ .Title }}</h2>
+    {{ with .Site.Params.description }}
+      <p>{{ . }}</p>
+    {{ end }}
+  </section>
 {{ end }}
 
 {{ define "title" }}
-{{.Title }} | {{ .Site.Title }}
+  {{.Title }} | {{ .Site.Title }}
 {{ end }}
 
 {{ define "main" }}
 <section class="gallery">
   <div class="container">
     <div class="row">
-      {{- /* Load all image resources */ -}}
       {{- $images := .Resources.Match "**images/*.{png,jpg}" -}}
-      {{ if $images }}
+
         {{ range $image := $images }}
-          {{- /* Ensure images are square */ -}}
+
           {{- if gt $image.Width $image.Height -}}
             {{- $image = $image.Fill (printf "%dx%d" $image.Height $image.Height) -}}
           {{- else -}}
@@ -32,11 +31,7 @@
             </a>
           </div>
         {{ end }}
-      {{ else }}
-        <div class="col-12">
-          <p>No images found for this gallery.</p>
-        </div>
-      {{ end }}
+
     </div>
   </div>
 </section>

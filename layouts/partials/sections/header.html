@@ -1,42 +1,13 @@
-<!-- Show header on scroll up -->
-{{ if .Site.Params.navbar.stickyNavBar.enable | default false }}
-{{ $showNavBarOnScrollUp := .Site.Params.navbar.stickyNavBar.showOnScrollUp | default false }}
-<script>
-    var prevScrollPos = window.pageYOffset;
-    window.addEventListener("scroll", function showHeaderOnScroll() {
-        let profileHeaderElem = document.getElementById("profileHeader");
-        let currentScrollPos = window.pageYOffset;
-        let resetHeaderStyle = false;
-        let showNavBarOnScrollUp = {{ $showNavBarOnScrollUp }};
-        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
-        if (showNavBar) {
-            profileHeaderElem.classList.add("showHeaderOnTop");
-        } else {
-            resetHeaderStyle = true;
-        }
-        if(currentScrollPos === 0) {
-            resetHeaderStyle = true;
-        }
-        if(resetHeaderStyle) {
-            profileHeaderElem.classList.remove("showHeaderOnTop");
-        }
-        prevScrollPos = currentScrollPos;
-    });
-</script>
-{{ end }}
-
-<!-- Navbar -->
 <header id="profileHeader">
     <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
-            <!-- navbar brand -->
+
             <a class="navbar-brand primary-font text-wrap" href="{{ .Site.BaseURL | relLangURL }}">
-                <img src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}" width="30" height="30"
+                <img src="{{ .Site.Params.navbar.brandLogo}}" width="30" height="30"
                     class="d-inline-block align-top">
                 {{ T "navbar_brandName" }}
             </a>
 
-            <!-- navbar toggler -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
@@ -44,13 +15,12 @@
                 </svg>
             </button>
 
-            <!-- navbar content -->
             <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
-                <ul class="navbar-nav {{ .Site.Params.navbar.align | default "ms-auto"}} text-center">
+                <ul class="navbar-nav {{ .Site.Params.navbar.align}} text-center">
 
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ "#about" | relLangURL }}" aria-label="about">
-                            {{ .Site.Params.about.title | default "About" }}
+                            {{ .Site.Params.about.title}}
                         </a>
                     </li>
 
@@ -62,7 +32,7 @@
 
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ "/services/" | relLangURL }}" aria-label="services">
-                            {{ .Site.Params.services.title | default "Services" }}
+                            {{ .Site.Params.services.title}}
                         </a>
                     </li>
 
@@ -72,35 +42,36 @@
                         </a>
                     </li>
 
-                    {{ if and .Site.Menus.main (.Site.Params.navbar.enableSeparator | default true) }}
-                        <li class="nav-item navbar-text d-none d-lg-block d-xl-block"><div class="nav-link nav-link-sep"></div></li>
-                        <div class="dropdown-divider"></div>
-                    {{ end }}
+                    <li class="nav-item navbar-text d-none d-lg-block d-xl-block"><div class="nav-link nav-link-sep"></div></li>
+                    <div class="dropdown-divider"></div>
+
+                    <!-- For Dropdown -->
+                    <script src="{{ .Site.Params.staticPath }}/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 
                     {{ range .Site.Menus.main }}
-                    {{ if .HasChildren }}
-                    <li class="nav-item navbar-text dropdown">
-                        <a class="nav-link dropdown-toggle" href="{{ .URL | relLangURL }}" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
-                            title="{{ i18n .Title }}">
-                            {{ i18n .Name }}
-                        </a>
-                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
-                            {{ range .Children }}
-                            <a class="dropdown-item text-center nav-link" href="{{ .URL | relLangURL }}"
+                        {{ if .HasChildren }}
+                        <li class="nav-item navbar-text dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
                                 title="{{ i18n .Title }}">
                                 {{ i18n .Name }}
                             </a>
-                            {{ end }}
-                        </div>
-                    </li>
-                    {{else}}
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{.URL | relLangURL }}" title="{{ i18n .Title }}">
-                            {{ i18n .Name }}
-                        </a>
-                    </li>
-                    {{end}}
+                            <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
+                                {{ range .Children }}
+                                <a class="dropdown-item text-center nav-link" href="{{ .URL | relLangURL }}"
+                                    title="{{ i18n .Title }}">
+                                    {{ i18n .Name }}
+                                </a>
+                                {{ end }}
+                            </div>
+                        </li>
+                        {{else}}
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="{{ .URL | relLangURL }}" title="{{ i18n .Title }}">
+                                {{ i18n .Name }}
+                            </a>
+                        </li>
+                        {{end}}
                     {{end}}
                 </ul>
             </div>

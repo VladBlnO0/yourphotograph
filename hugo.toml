@@ -1,4 +1,4 @@
-baseURL = "http://localhost/"
+baseURL = "http://localhost:1313/"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 
@@ -115,7 +115,6 @@ defaultContentLanguageInSubdir = true
     description = "Cool site"
     favicon = "/logo.png"
 
-    useBootstrapCDN = false
     animate = true
 
     [params.services]
@@ -141,14 +140,7 @@ defaultContentLanguageInSubdir = true
         align = "ms-auto"
         brandLogo = "/logo.png"
         brandName = "{{ T `navbar_brandName` }}"
-        [params.navbar.stickyNavBar]
-            enable = true
-            showOnScrollUp = true
         enableSeparator = false
-        [params.navbar.menus]
-            disableAbout = false
-            disableKind_words = false
-            disableContact = false
 
     [params.hero]
         enable = true
@@ -174,8 +166,3 @@ defaultContentLanguageInSubdir = true
         [params.footer.socialNetworks]
             instagram = "https://instagram.com"
             facebook = "https://facebook.com"
-
-
-    # customScripts = """
-    #   <script type="text/javascript"><!-- any script here --></script>
-    # """

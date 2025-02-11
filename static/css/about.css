@@ -109,8 +109,6 @@
     color: var(--secondary-color) !important;
 }
 
-/* code */
-
 #about .page-content pre {
     border-radius: 0.7em !important;
     margin: 5px;
@@ -129,8 +127,6 @@
     color: var(--primary-color) !important;
 }
 
-/* kbd and mark */
-
 #about .page-content kbd {
     color: var(--primary-color) !important;
     background-color: var(--secondary-color) !important;
@@ -140,8 +136,6 @@
     color: var(--primary-color) !important;
     background-color: var(--secondary-color) !important;
 }
-
-/* list */
 
 #about .page-content ol,
 #about .page-content ul {
@@ -157,10 +151,8 @@
     padding-left: 1.5em;
 }
 
-/* sidebar */
-
 #about aside {
-    /* background-color: var(--secondary-color); */
+    background-color: var(--secondary-color);
     border-radius: .7rem;
     padding: .7rem 1rem;
     margin-bottom: 1em;
@@ -171,8 +163,6 @@
     top: 150px;
 }
 
-/* aboutImg */
-
 #about aside.aboutImg {
     padding: .7rem 1rem;
 }
@@ -181,7 +171,7 @@
     border-radius: 1.5rem !important;
     position: relative;
     box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
-    /* max-width: 100%; */
+    max-width: 100%;
     width: 500px;
     height: 300px;
     object-fit: cover;
@@ -230,8 +220,6 @@
     opacity: .8;
     color: var(--primary-color);
 }
-
-/* Top scroll */
 
 #about #topScroll {
     display: none;

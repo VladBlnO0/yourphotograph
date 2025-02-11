@@ -55,7 +55,6 @@
     background-color: transparent !important;
 }
 
-/* pagination */
 #list-page ul li a {
     transition: none;
     border-color: var(--secondary-color);
